@@ -9,6 +9,15 @@
 
 		$ node main.js --help
 
+## Start test
+
+		$ node main.js /path/to/project --test
+
+OR
+
+		$ node main.js /path/to/project -t
+
+
 ## Start demo
 
 		$ cd /path/to/nmicro-client/
