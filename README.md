@@ -2,7 +2,8 @@
 
 ## Install
 
-		$ cd /path/to/nmicro-client/
+		$ git clone https://github.com/daviddauvergne/nmicro-client.git
+		$ cd nmicro-client/
 		$ npm install
 
 ## Help
