@@ -1,0 +1,30 @@
+{
+	"name": "nmicro-client",
+	"version": "0.2.1",
+	"description": "",
+	"main": "main.js",
+	"repository": "https://github.com/daviddauvergne/nmicro-client.git",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "David dauvergne",
+	"license": "MIT",
+	"dependencies": {
+		"clean-css": "^3.4.23",
+		"commander": "^2.9.0",
+		"fs-extra": "^2.0.0",
+		"highlight.js": "^9.11.0",
+		"marked": "^0.3.6",
+		"node-dir": "^0.1.16",
+		"node-expat": "^2.3.15",
+		"node-sass": "^4.3.0",
+		"require-reload": "^0.2.2",
+		"restify": "^4.3.0",
+		"socket.io": "^2.0.1",
+		"tosource": "^1.0.0",
+		"uglify-js": "^2.7.5",
+		"watchr": "^3.0.1",
+		"winston": "^2.3.1",
+		"yargs": "^7.1.0"
+	}
+}

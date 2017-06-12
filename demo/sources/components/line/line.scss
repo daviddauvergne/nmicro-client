@@ -1,0 +1,10 @@
+line {
+	display: block;
+	width: 500px;
+	border: 1px solid gray;
+	padding: 5px;
+	text-align: center;
+	margin: 5px auto;
+	cursor: pointer;
+	@include no_select;
+}

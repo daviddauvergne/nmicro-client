@@ -1,0 +1,4 @@
+{
+	"BadRequestError" : "La syntaxe de la requête est erronée.",
+	"NotFoundError": "Ressource non trouvée."
+}

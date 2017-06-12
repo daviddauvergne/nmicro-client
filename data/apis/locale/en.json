@@ -1,0 +1,4 @@
+{
+	"BadRequestError" : "Bad Request",
+	"NotFoundError": "Resource not found"
+}

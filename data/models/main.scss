@@ -1,0 +1,52 @@
+.dialog {
+	visibility:hidden;
+	display:block;
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-width: 140px;
+}
+
+.dialog[data-mode="simple"], .dialog[data-mode="alert"], .dialog[data-mode="wait"] {
+	font-size: 15px;
+	min-width: 140px;
+	padding: 10px 10px 20px 10px;
+	text-align: center;
+	background: #FFF;
+	margin: 0;
+	-webkit-box-shadow:-5px 5px 30px 0 rgba(0,0,0,.5);
+	-moz-box-shadow:-5px 5px 30px 0 rgba(0,0,0,.5);
+	-ms-box-shadow:-5px 5px 30px 0 rgba(0,0,0,.5);
+	-o-box-shadow:-5px 5px 30px 0 rgba(0,0,0,.5);
+	box-shadow:-5px 5px 30px 0 rgba(0,0,0,.5);
+	border-radius: 5px;
+}
+
+.dialog[data-mode="wait"] {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.dialogModal {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.dialogModal[data-mode="simple"],
+.dialogModal[data-mode="wait"] {
+	background:
+	radial-gradient(black 15%, transparent 16%) 0 0,
+	radial-gradient(black 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#282828;
+	background-size:16px 16px;
+	opacity: 0.3;
+}
+
+.dialog[data-mode="alert"] {
+	color:red;
+}

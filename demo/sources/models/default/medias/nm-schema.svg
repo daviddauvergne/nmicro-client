@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" height="148.5mm" width="132.69mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" viewBox="0 0 470.17321 526.19067" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<defs id="defs4">
+		<filter id="filter4409" style="color-interpolation-filters:sRGB" height="1.1551" width="1.0284" y="-.077538" x="-.014197">
+			<feGaussianBlur id="feGaussianBlur4411" stdDeviation="2.1"/>
+		</filter>
+		<filter id="filter4409-7" style="color-interpolation-filters:sRGB" height="1.1551" width="1.0284" y="-.077538" x="-.014197">
+			<feGaussianBlur id="feGaussianBlur4411-8" stdDeviation="2.1"/>
+		</filter>
+		<filter id="filter4409-7-3" style="color-interpolation-filters:sRGB" height="1.1551" width="1.0284" y="-.077538" x="-.014197">
+			<feGaussianBlur id="feGaussianBlur4411-8-1" stdDeviation="2.1"/>
+		</filter>
+		<filter id="filter4409-8" style="color-interpolation-filters:sRGB" height="1.1551" width="1.0284" y="-.077538" x="-.014197">
+			<feGaussianBlur id="feGaussianBlur4411-9" stdDeviation="2.1"/>
+		</filter>
+	</defs>
+	<g id="layer1" transform="translate(-167.41 -129.78)">
+		<rect id="rect4236" style="stroke:#000;stroke-miterlimit:0;fill:#fff" height="25" width="455" y="137.36" x="175"/>
+		<circle id="path4148" r="4.8279" style="fill:#f00" cx="615.21" cy="149.86"/>
+		<circle id="path4148-3" r="4.8279" style="fill:#0f0" cx="601.69" cy="149.86"/>
+		<rect id="rect4175" style="stroke:#999;stroke-miterlimit:0;stroke-width:2;fill:#fff" ry="0" height="17.857" width="403.57" y="140.93" x="186.43"/>
+		<text id="text4233" style="font-size:13.383px;letter-spacing:0px;line-height:125%;word-spacing:0px;font-family:Sans;fill:#000000" xml:space="preserve" y="153.55438" x="192.21172"><tspan id="tspan4235" x="192.21172" y="153.55438">http://www.domain.com/index.html</tspan></text>
+		<rect id="rect4238" style="stroke:#000;stroke-miterlimit:0;fill:#fff" height="210" width="455" y="162.36" x="175"/>
+		<text id="text4240" style="letter-spacing:0px;font-size:14.619px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="186.36446" x="194.09082"><tspan id="tspan4242" x="194.09082" y="186.36446">bundle : index</tspan></text>
+		<g id="g4439" transform="translate(-6.0025 -4.4848)">
+			<g id="g4413" transform="matrix(1.132 0 0 .99499 -43.149 2.6441)">
+				<rect id="rect4244-6" style="filter:url(#filter4409);fill:#808080;fill-opacity:.51429" height="65" width="355" y="210.22" x="217.14"/>
+				<rect id="rect4244" style="stroke:#000;stroke-miterlimit:0;fill:#fff" height="65" width="355" y="205.93" x="222.14"/>
+			</g>
+			<text id="text4240-2" style="letter-spacing:0px;font-size:14.619px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" y="225.93588" x="221.01939" xml:space="preserve"><tspan id="tspan4242-1" y="225.93588" x="221.01939">module-x</tspan></text>
+		</g>
+		<g id="g4439-5" transform="translate(-6.0025 81.728)">
+			<g id="g4413-7" transform="matrix(1.132 0 0 .99499 -43.149 2.6441)">
+				<rect id="rect4244-6-4" style="filter:url(#filter4409-7);fill:#808080;fill-opacity:.51429" height="65" width="355" y="210.22" x="217.14"/>
+				<rect id="rect4244-1" style="stroke:#000;stroke-miterlimit:0;fill:#fff" height="65" width="355" y="205.93" x="222.14"/>
+			</g>
+			<text id="text4240-2-8" style="letter-spacing:0px;font-size:14.619px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" y="225.93588" x="221.01939" xml:space="preserve"><tspan id="tspan4242-1-5" y="225.93588" x="221.01939">module-y</tspan></text>
+		</g>
+		<text id="text4482" style="letter-spacing:0px;font-size:13.855px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="244.73074" x="336.77026"><tspan id="tspan4484" x="336.77026" y="244.73074">&lt;component-b&gt;&lt;/component-b&gt;</tspan><tspan id="tspan4486" x="336.77026" y="262.04913"/></text>
+		<text id="text4482-3" style="letter-spacing:0px;font-size:13.855px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="329.01645" x="337.84171"><tspan id="tspan4484-8" x="337.84171" y="329.01645">&lt;component-c&gt;&lt;/component-c&gt;</tspan><tspan id="tspan4486-8" x="337.84171" y="346.33484"/></text>
+		<rect id="rect4236-6" style="stroke:#000;stroke-miterlimit:0;fill:#fff" height="25" width="455" y="413.36" x="175"/>
+		<circle id="path4148-4" r="4.8279" style="fill:#f00" cx="615.21" cy="425.86"/>
+		<circle id="path4148-3-3" r="4.8279" style="fill:#0f0" cx="601.69" cy="425.86"/>
+		<rect id="rect4175-3" style="stroke:#999;stroke-miterlimit:0;stroke-width:2;fill:#fff" ry="0" height="17.857" width="403.57" y="416.93" x="186.43"/>
+		<text id="text4233-8" style="font-size:13.383px;letter-spacing:0px;line-height:125%;word-spacing:0px;font-family:Sans;fill:#000000" xml:space="preserve" y="429.55438" x="192.21172"><tspan id="tspan4235-6" x="192.21172" y="429.55438">http://www.domain.com/xxxx.html</tspan></text>
+		<rect id="rect4238-0" style="stroke:#000;stroke-miterlimit:0;fill:#fff" height="210" width="455" y="438.36" x="175"/>
+		<text id="text4240-4" style="letter-spacing:0px;font-size:14.619px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="462.36444" x="194.09082"><tspan id="tspan4242-8" x="194.09082" y="462.36444">bundle : xxxx</tspan></text>
+		<rect id="rect4244-6-9" style="filter:url(#filter4409-8);fill:#808080;fill-opacity:.51429" transform="matrix(1.1237 0 0 2.3041 -45.873 3.1266)" height="65" width="355" y="210.22" x="217.14"/>
+		<rect id="rect4244-7" style="stroke:#000;stroke-miterlimit:0;fill:#fff" height="154.36" width="398.66" y="477.55" x="203.86"/>
+		<text id="text4240-2-7" style="letter-spacing:0px;font-size:14.619px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="497.45111" x="215.01686"><tspan id="tspan4242-1-6" x="215.01686" y="497.45111">module-x</tspan></text>
+		<g id="g4413-7-3" transform="matrix(1.0281 0 0 1.1105 -9.15 307.33)">
+			<rect id="rect4244-6-4-0" style="filter:url(#filter4409-7-3);fill:#808080;fill-opacity:.51429" height="65" width="355" y="210.22" x="217.14"/>
+			<rect id="rect4244-1-3" style="stroke:#000;stroke-miterlimit:0;fill:#fff" height="65" width="355" y="205.93" x="222.14"/>
+		</g>
+		<text id="text4240-2-8-0" style="letter-spacing:0px;font-size:14.619px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="554.36987" x="229.15901"><tspan id="tspan4242-1-5-9" x="229.15901" y="554.36987">module-y</tspan></text>
+		<text id="text4482-2" style="letter-spacing:0px;font-size:13.855px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="520.73071" x="336.77026"><tspan id="tspan4484-5" x="336.77026" y="520.73071">&lt;component-a&gt;&lt;/component-a&gt;</tspan><tspan id="tspan4486-4" x="336.77026" y="538.04907"/></text>
+		<text id="text4482-3-0" style="letter-spacing:0px;font-size:13.855px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="574.81342" x="336.32648"><tspan id="tspan4484-8-5" x="336.32648" y="574.81342">&lt;component-b&gt;&lt;/component-b&gt;</tspan><tspan id="tspan4486-8-9" x="336.32648" y="592.13177"/></text>
+		<text id="text4482-3-0-4" style="letter-spacing:0px;font-size:13.855px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="464.91495" x="326.53464"><tspan id="tspan4484-8-5-6" x="326.53464" y="464.91495">&lt;component-a&gt;&lt;/component-a&gt;</tspan><tspan id="tspan4486-8-9-9" x="326.53464" y="482.23334"/></text>
+		<text id="text4482-3-0-4-2" style="letter-spacing:0px;font-size:13.855px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="595.91492" x="338.10574"><tspan id="tspan4484-8-5-6-2" x="338.10574" y="595.91492">&lt;component-c&gt;&lt;/component-c&gt;</tspan><tspan id="tspan4486-8-9-9-4" x="338.10574" y="613.23328"/></text>
+		<text id="text4482-3-0-4-4" style="letter-spacing:0px;font-size:13.855px;word-spacing:0px;font-family:Sans;line-height:125%;fill:#000000" xml:space="preserve" y="191.91495" x="368.53464"><tspan id="tspan4484-8-5-6-8" x="368.53464" y="191.91495">&lt;component-a&gt;&lt;/component-a&gt;</tspan><tspan id="tspan4486-8-9-9-1" x="368.53464" y="209.23332"/></text>
+	</g>
+</svg>

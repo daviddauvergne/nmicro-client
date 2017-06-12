@@ -1,0 +1,13 @@
+{
+	"title":       "Demonstration",
+	"openconsole": "Open the console!!",
+	"button":      {
+		"private":        "Private value",
+		"public":         "Public function",
+		"multiTemplates": "Mutli-templates",
+		"simple":         "Simple module",
+		"dialog":         "Dialog module"
+	},
+	"dmessage": "A message",
+	"dtitle":   "A title"
+}

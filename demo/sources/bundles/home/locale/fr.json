@@ -1,0 +1,13 @@
+{
+	"title":       "Démonstration",
+	"openconsole": "Ouvrez la console !!",
+	"button":      {
+		"private":        "Valeur privée",
+		"public":         "Fonction publique",
+		"multiTemplates": "Plusieurs templates",
+		"simple":         "Module simple",
+		"dialog":         "Module dialogue"
+	},
+	"dmessage": "Un message",
+	"dtitle":   "Un titre"
+}
