@@ -59,7 +59,7 @@ window.$load = (function() {
 			});
 		}
 		if(properties.headers){
-			properties.headers.forEach(function(head)){
+			properties.headers.forEach(function(head){
 				xhr.setRequestHeader(head.name, head.value);
 			});
 		}
