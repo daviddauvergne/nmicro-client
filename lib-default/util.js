@@ -35,9 +35,9 @@ window.$util = {
 		};
 
 		for (var k in data) {
-			var el;
+			var el = null;
 			var all = false;
-			var mk;
+			var mk = null;
 
 			if(tpl.match && tpl.match[k])
 				mk = tpl.match[k];
@@ -92,5 +92,45 @@ window.$util = {
 		return n.replace(/-([a-zA-Z])/g, function (m, w) {
 			return w.toUpperCase();
 		});
+	},
+	objToFormData: function(object) {
+		var isObject = function(value) {
+			return value === Object(value);
+		};
+		var isArray = function(value) {
+			return Array.isArray(value);
+		};
+		var isFile = function(value) {
+			return value instanceof File;
+		};
+		var makeArrayKey = function(key) {
+			if (key.length > 2 && key.lastIndexOf('[]') === key.length - 2)
+				return key;
+			return key + '[]';
+		};
+		var oTFD = function(obj, fd, pre) {
+			fd = fd || new FormData();
+
+			Object.keys(obj).forEach(function (prop) {
+				var key = pre ? (pre + '[' + prop + ']') : prop;
+				if (isObject(obj[prop]) && !isArray(obj[prop]) && !isFile(obj[prop])) {
+					oTFD(obj[prop], fd, key);
+				} else if (isArray(obj[prop])) {
+					obj[prop].forEach(function (value) {
+						var arrayKey = makeArrayKey(key);
+						if (isObject(value) && !isFile(value)) {
+							oTFD(value, fd, arrayKey);
+						} else {
+							fd.append(arrayKey, value);
+						}
+					})
+				} else {
+					fd.append(key, obj[prop]);
+				}
+			})
+
+			return fd;
+		};
+		return oTFD(object);
 	}
 };

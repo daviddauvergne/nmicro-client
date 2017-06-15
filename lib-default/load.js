@@ -18,14 +18,14 @@ window.$load = (function() {
 			if ( xhr.readyState === 4 ) {
 				var contType = xhr.getResponseHeader("Content-Type");
 				var result;
-				if(contType=='application/json'){
+				if(contType=='application/json' && !xhr.responseType){
 					result = JSON.parse(xhr.responseText);
 					if(properties.req.getJWT && result[properties.req.getJWT])
 						sessionStorage.JWT = result[properties.req.getJWT];
 				} else {
-					result = xhr.responseText;
+					result = xhr.response;
 				}
-				if ( ( xhr.status === 200 ) || ( ( xhr.status === 0 ) && xhr.responseText ) ) {
+				if ( ( xhr.status === 200 ) || ( ( xhr.status === 0 ) && xhr.response ) ) {
 					if(properties.res.http_200){
 						properties.res.http_200.apply(scope,[result]);
 					} else if(properties.res.default.http_200){
@@ -58,11 +58,15 @@ window.$load = (function() {
 				}
 			});
 		}
-		if(properties.headers){
-			properties.headers.forEach(function(head){
+		if(properties.req.headers){
+			propertiesreq.req.headers.forEach(function(head){
 				xhr.setRequestHeader(head.name, head.value);
 			});
 		}
+		if(properties.req.responseType){
+			xhr.responseType = properties.req.responseType;
+		}
+
 		if(properties.req.method=='GET'){
 			xhr.open("GET",properties.req.url + queryString('GET',properties.data));
 			auth();
@@ -70,6 +74,9 @@ window.$load = (function() {
 		} else {
 			xhr.open(properties.req.method, properties.req.url , true);
 			auth();
+			if(properties.data && properties.data instanceof FormData===false && typeof properties.data == 'object')
+				properties.data = $util.objToFormData(properties.data);
+
 			xhr.send(properties.data);
 		}
 	};

@@ -11,12 +11,18 @@ module.exports = {
 			req :{
 				// method get,post,put,del
 				method : 'post',
-				// headers
-				// headers : [{name:'accept-version',value:"~2"}],
 				// url de la route ex: /foo/bar
 				url : '/foo/bar',
+
+				// responseType
+				// responseType : 'blob',
+
+				// headers
+				// headers : [{name:'accept-version',value:"~2"}],
+
 				// ajout automatique du JSON Web Token (header Authorization)
 				// setJWT : true
+
 				// Sauvegarde automatique du JWT envoyé, le nom de la clé retourné à la valeur de getJWT (ici : JWT)
 				// getJWT : 'JWT'
 
