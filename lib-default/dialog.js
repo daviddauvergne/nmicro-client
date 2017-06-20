@@ -1,5 +1,7 @@
 window.$dia = (function(undefined) {
 
+	window.FINAL = false;
+
 	var eventsScroll = ['DOMMouseScroll','mousewheel','touchmove'];
 
 	var stopScroll = function(event){
@@ -77,11 +79,15 @@ window.$dia = (function(undefined) {
 		var modalClose = false;
 		var id = null;
 		var idModal = null;
+		var final = false;
 		return {
 			init : null,
 			assignTPL : function(args){
 				if(args.mode)
 					mode = args.mode;
+
+				if(args.final)
+					final = args.final;
 
 				if(args.modalclose)
 					modalClose = true;
@@ -90,7 +96,9 @@ window.$dia = (function(undefined) {
 				tpl = args;
 			},
 			show : function(data,values){
-				if(tpl){
+				if(tpl && !window.FINAL){
+					if(final)
+						window.FINAL = true;
 					var _this = this;
 					var zIndex = topZIndex();
 					document.body.insertAdjacentHTML('beforeend',
@@ -139,7 +147,8 @@ window.$dia = (function(undefined) {
 						diaEl.style.visibility = 'visible';
 					}, 80);
 				} else {
-					console.log('dialog: '+name+' does not exist');
+					if(!window.FINAL)
+						console.log('dialog: '+name+' does not exist');
 				}
 			},
 			hide : function(){
@@ -150,6 +159,7 @@ window.$dia = (function(undefined) {
 						diaEl.remove();
 					if(diaModalEl)
 						diaModalEl.remove();
+					window.FINAL = false;
 				},20);
 			}
 		};

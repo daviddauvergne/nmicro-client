@@ -24,7 +24,10 @@ module.exports = {
 		// dialog : true,
 
 		// dialog mode
-		// mode :'alert'
+		// mode :'alert',
+
+		// dialog final (last dialog possible)
+		// final : true,
 
 		// match for this module and multi-templates
 		// match : {},
