@@ -34,13 +34,21 @@ window.$load = (function() {
 				} else {
 					//<DEV>
 					if(window.MODE == 'web'){
-						socket.emit('console', { type: 'error', arguments: [xhr.status, result.code, result.message]});
+						var tmp = {code:null,message:null};
+						if(result)
+							tmp = result;
+						socket.emit('console', { type: 'error', arguments: [xhr.status, tmp.code, tmp.message]});
 					}
 					//</DEV>
-					if(properties.res.default['http_'+xhr.status])
+					if(properties.res['http_'+xhr.status]){
+						properties.res['http_'+xhr.status].apply(scope,[xhr.status,result]);
+					} else if(properties.res.default['http_'+xhr.status]){
 						properties.res.default['http_'+xhr.status].apply(scope,[xhr.status,result]);
-					else
+					} else if (properties.res.http_error) {
+						properties.res.http_error.apply(scope,[xhr.status,result])
+					} else {
 						properties.res.default.http_error.apply(scope,[xhr.status,result]);
+					}
 				}
 			}
 		};
