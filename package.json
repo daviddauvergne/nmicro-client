@@ -1,6 +1,6 @@
 {
 	"name": "nmicro-client",
-	"version": "0.2.1",
+	"version": "0.2.3",
 	"description": "",
 	"main": "main.js",
 	"repository": "https://github.com/daviddauvergne/nmicro-client.git",
@@ -15,6 +15,7 @@
 		"fs-extra": "^2.0.0",
 		"highlight.js": "^9.11.0",
 		"marked": "^0.3.6",
+		"md5-file": "^3.1.1",
 		"node-dir": "^0.1.16",
 		"node-expat": "^2.3.15",
 		"node-sass": "^4.3.0",

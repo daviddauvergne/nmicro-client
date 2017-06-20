@@ -3,6 +3,9 @@ const pjson = require('./package.json');
 const logger = require('./lib/logger');
 const path = require('path');
 const fs = require('fs-extra');
+const dirnode = require('node-dir');
+const md5File = require('md5-file');
+const crypto = require('crypto');
 
 logger.msg([{b_blue:pjson.name}],true);
 logger.msg([{b_blue:'VERSION: '+pjson.version}]);
@@ -86,6 +89,7 @@ var _conf = {
 	dataFolder : path.join(__dirname,'data'),
 	setting : '',
 	dev : dev,
+	appcache : false,
 	devString : devString,
 	out : path.join(dir,'out','/'),
 	outCss : path.join(dir,'out','css'),
@@ -174,11 +178,58 @@ setTimeout(function () {
 	compilLibDefault.getLibString(_conf,path.join(__dirname,'lib-default'),function(jsSetting){
 		_conf.setting = jsSetting;
 
+	var final = function(){
+		if(_conf.appcache){
+			var loopLength = _conf.models.length*_conf.langues.length;
+			var count = 0;
+			var finatPut = function(){
+				count++;
+				if(count==loopLength)
+					logger.msg([{yellow:'Appcache finish'}]);
+			};
+			_conf.models.forEach(function(model){
+				_conf.langues.forEach(function(lang){
+					var pathWML = path.join(_conf.out,'web',model,lang)
+					dirnode.files(pathWML, function(err, files) {
+						if (err) throw err;
+						var hashFiles = '';
+						var filesRelative = files.map(function(file){
+							hashFiles += md5File.sync(file);
+							return file.substring(pathWML.length+1);
+						})
+						var filesSting = filesRelative.join("\n");
+						var hash = crypto.createHash('md5').update(hashFiles).digest('hex');
+						var date = new Date().toUTCString();
+						var manifest = `CACHE MANIFEST
+
+CACHE:
+${filesSting}
+
+FALLBACK:
+/ /index.html
+
+NETWORK:
+*
+
+# ${hash}
+# ${date}
+`;
+							fs.outputFile(path.join(pathWML,_conf.appcache), manifest, function (err) {
+								if (err) return console.error(err);
+								finatPut();
+							});
+						});
+					});
+				});
+			}
+		};
 		server.post('/nmicro/compilall', function(req, res, next) {
 			_conf.models = fs.readdirSync(_conf.sourcesModels);
 			_conf.bundles = fs.readdirSync(_conf.sourcesBdl);
 			_conf.pages = fs.readdirSync(_conf.sourcesPages);
-			compilModels(_conf,emitMessage);
+			compilModels(_conf,emitMessage,function(){
+				final();
+			});
 			res.send('ok');
 			return next();
 		});
@@ -186,7 +237,9 @@ setTimeout(function () {
 			if(socket)
 				socket.emit('message', { content: name, importance: '1' });
 		};
-		compilModels(_conf,emitMessage);
+		compilModels(_conf,emitMessage,function(){
+			final();
+		});
 		var socket = null;
 		toWatch(_conf,modeDefault,logger,server,emitMessage);
 
@@ -211,5 +264,6 @@ setTimeout(function () {
 			});
 		});
 		logger.init();
+
 	});
 }, 200);
