@@ -45,7 +45,10 @@ window.$util = {
 			var dk = data[k];
 			if(mk){
 				if(mk.selector){
-					el = overlayEl.querySelector(mk.selector);
+					if(mk.selector==':scope')
+						el = overlayEl;
+					else
+						el = overlayEl.querySelector(mk.selector);
 				} else if(mk.selectorAll){
 					el = overlayEl.querySelectorAll(mk.selector);
 					all = true;

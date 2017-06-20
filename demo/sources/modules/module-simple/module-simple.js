@@ -57,7 +57,7 @@ module.exports = {
 				// pour assigner la clé 'key' de data
 
 				// 1) recherche de l'élément
-				//  - selector : CSS selector depuis l'overlay
+				//  - selector : CSS selector depuis l'overlay or ':scope' for select overlay element
 				//  - selectorAll : CSS selector depuis l'overlay
 				//  - el : sélection de l'élément avec l'attribut el="..."
 				// 	- par default : si le template contient un élément avec el="key" (même clé que data)
