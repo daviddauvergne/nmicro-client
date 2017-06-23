@@ -144,6 +144,9 @@ setTimeout(function () {
 	_conf.pages = fs.readdirSync(_conf.sourcesPages);
 
 	const compilModels = require('./lib/all-compil-models');
+	const goodUrl = require('./lib/goodUrl');
+	_conf.goodUrl = goodUrl(devString);
+
 	const toWatch = require('./lib/watch');
 	const restify = require('restify');
 	const server = restify.createServer();
